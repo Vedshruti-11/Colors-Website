@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 450;
+    color: #fff;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 35, 35);
+}
+
+
+/* NAVBAR section */
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+#navbar__logo {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 2.0rem;
+    }
+    #navbar__logo {
+        padding-left: 25px;
+    }
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    .navbar__item {
+        width: 100%;
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+}
+
+
+/* FORM SECTION */
+
+.container {
+    background-color: #fafafa;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-time {
+    background-color: rgba(0, 0, 0, .95);
+    padding: 10%;
+    /* padding: 50px; */
+    outline: 3px dashed #f3244f;
+    outline-offset: -30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 35px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+.heading-days {
+    color: #f32446;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.heading-phone {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-form {
+    padding-right: 6%;
+    margin: 0% 10%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* grid-row-gap: 20px; */
+}
+
+form p {
+    font-weight: 600;
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+input,
+select {
+    padding: 2% 2%;
+    display: flex;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: grid;
+}
+
+.submit {
+    background-color: rgba(0, 0, 0, .95);
+    color: #fff;
+    padding: 2% 2%;
+    border: none;
+    font-size: 18px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    box-shadow: 7px 10px 12px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.submit:hover {
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    box-shadow: 10px 12px 15px rgba(0, 0, 0, .3);
+}

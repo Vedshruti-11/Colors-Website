@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Take an Appointment</title>
+    <link rel="stylesheet" href="css/appointment.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
+</head>
+
+<body id="form">
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#form" id="navbar__logo">COLOR</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container modal">
+        <div class="container-time">
+            <h2 class="heading">Time Open</h2>
+            <h3 class="heading-days">Monday-Friday</h3>
+            <p>7am - 11am </p>
+            <p>11am - 10pm </p>
+
+            <h3 class="heading-days">Saturday and sunday</h3>
+            <p>9am - 1am </p>
+            <p>1am - 10pm </p>
+
+
+            <h4 class="heading-phone">Call Us: (123) 45-45-456</h4>
+        </div>
+
+        <div class="container-form ">
+            <form action="/action_page.php">
+                <h2 class="heading heading-yellow">Reservation Online</h2>
+
+                <div class="form-field">
+                    <p>Your Name</p>
+                    <input type="text" placeholder="Your Name" name="text" required>
+                    <p>Your email</p>
+                    <input type="email" placeholder="Your email" name="email" required>
+                    <p>Date</p>
+                    <input type="date" name="date" required>
+                    <p>Time</p>
+                    <input type="time" name="time" required>
+                    <p>How many people?</p>
+                    <select name="select" id="#">
+                        <option value="1">1 person</option>
+                        <option value="2">2 persons</option>
+                        <option value="3">3 persons</option>
+                        <option value="4">4 persons</option>
+                        <option value="5">5 persons</option>
+                        <option value="5+">5+ persons</option>
+                    </select>
+                </div>
+                <br><br>
+                <button class="submit clearfix">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/appointment.js"></script>
+
+</html>
